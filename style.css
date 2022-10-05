@@ -9,53 +9,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
     width: 30vw;
     height: 100vh;
     min-width: 400px;
-
     background-image: url("images/jeferson-argueta-l-z44pz4mlM-unsplash.jpg");
     background-position: 20%;
     background-size: 160%;
     background-repeat: no-repeat;
     gap: 100px;
-    
-
 }
 
 img {
     padding-top: 100px;
-    max-width: 150px;
+    max-width: 100px;
     padding: 60px;
     border-radius: 800px;
     background-color: rgba(240, 248, 255, 0.136);
+    display: none;
 }
 
 #right {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     width: 70%;
     padding: 60px 100px;
-
-    background-color: rgb(61, 64, 67);
+    background-color: rgb(18, 19, 19);
     border-left: ghostwhite solid 1px;
 }
 
 form {
     padding-left: 38px;
-
 }
 
 h1 {
-    
     text-align: center;
     margin-top: 80px;
     padding: 30px 0;
     width: 100%;
-
-    background-color: rgba(239, 248, 255, 0.358);
     color: ghostwhite;
     text-shadow: 1px maroon;
     border-top: ghostwhite solid 1px;
@@ -85,11 +76,21 @@ fieldset {
     gap: 8px;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 input:focus {
-    position: relative;
-    border: greenyellow solid 1.2px;
+    border-color: rgb(0, 208, 255);
     outline: none;
- 
 }
 
 
@@ -100,7 +101,7 @@ label {
 
 input {
     border-radius: 3px;
-    border: rgb(255, 77, 0) solid 1.2px;
+    border: rgb(38, 38, 38) solid 2px;
     height: 1.6rem;
     width: 16rem;
 }
@@ -109,8 +110,18 @@ input:first-of-type {
     margin-right: 30px;
 }
 
+.invalid-js,  .css-validity:invalid {
+    border-color: rgb(255, 117, 117);
+    background-color: rgb(255, 202, 202);
+}
+
+.valid-js, .css-validity:valid {
+    border-color: limegreen;
+    background-color: rgb(154, 204, 154);
+}
+
 h2 {
-    margin-right: 355px;
+    text-align: center;
 }
 
 hr {

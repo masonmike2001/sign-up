@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <script src="app.js" defer></script>
     <title>Signup Form</title>
 </head>
 <body>
     <div id="left">
-
-        <img src="/Users/MikeMason14/Library/CloudStorage/OneDrive-Personal/Programming/Projects/Odin Project/Intermediate HTML (II)/Projects/Sign Up/images/odin-lined.png" alt="">
         <h1>Mram</h1>
+        <img src="/Users/MikeMason14/Library/CloudStorage/OneDrive-Personal/Programming/Projects/Odin Project/Intermediate HTML (II)/Projects/Sign Up/images/odin-lined.png" alt="">
     </div>
     <div id="right">
         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
@@ -26,41 +26,40 @@
             <form action="post">
                 <fieldset>
                     <div class="input">
-                        <label for="f-name">First Name: </label>
-                        <input required name="f-name" id="f-name" type="text">
+                        <label for="f-name">First Name* </label>
+                        <input required class="css-validity" name="f-name" id="f-name" type="text" pattern="[a-z]" title="Name should only contain letters. e.g. John">
                     </div>
                     <div class="input">
-                        <label for="l-name">Last Name: </label>
-                        <input required name="l-name" id="l-name" type="text">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="input">
-                        <label for="email">Email Address: </label>
-                        <input required name="email" id="email" type="email">
-                    </div>
-                    <div class="input">
-                        <label for="number">Phone Number: </label>
-                        <input name="number" id="number" type="text">
+                        <label for="l-name">Last Name* </label>
+                        <input required class="css-validity" name="l-name" id="l-name" type="text" pattern="[a-z]" title="Name should only contain letters. e.g. Johnson">
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="input">
-                        <label for="f-password">Password: </label>
+                        <label for="email">Email Address* </label>
+                        <input required name="email" class="css-validity" id="email" type="email">
+                    </div>
+                    <div class="input">
+                        <label for="number">Phone Number </label>
+                        <input name="number" id="number" type="number" max="9999999999" title="Phone should only contain numbers.">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="input">
+                        <label for="f-password">Password* </label>
                         <input required name="f-password" id="f-password" type="password">
                     </div>
                     <div class="input">
-                        <label for="l-password">Reenter Password: </label>
-                        <input name="l-password" id="l-password" type="password">
+                        <label for="l-password">Reenter Password* </label>
+                        <input name="l-password" id="l-password" type="password" title="Passwords should match.">
                     </div>
                 </fieldset>
                 <fieldset>
-                    <input required type="submit" value="submit">
+                    <input required type="submit" value="Sign Up">
                 </fieldset>
             </form>
         </div>
         <a href=""></a>
-    </div>
-    
+    </div>  
 </body>
 </html>
